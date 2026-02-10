@@ -1,0 +1,437 @@
+body {
+  min-height: 100vh;      /* Ocupa toda la altura de la pantalla */
+  display: flex;          /* Activa flexbox */
+  flex-direction: column; /* Ordena en columna */
+  margin: 0;
+}
+
+
+h1 {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: orange;
+    font-size: 50px;
+    text-shadow: 2px 2px 2px #000;
+    margin: 20px 0;
+}
+
+header {  
+  background-color: darkblue;
+  display: grid; 
+  grid-template-columns: 1fr auto 1fr; 
+  align-items: center;
+  padding: 10px;  
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  justify-content: space-between;
+}
+
+header h1 {
+  grid-column: 2;
+  justify-self: center;
+}
+
+
+nav{
+  grid-column: 3;    /* 3. El menú se va a la columna de la derecha */
+  justify-self: end; /* 4. Lo empujamos al final del todo */
+}
+
+.navigatorbar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: darkblue;
+    transition: all 0.3s ease;
+}
+
+.navigationbarlist{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: darkblue;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    transition: all 0.3s ease;
+    display: flex;
+    gap: 15px;
+}
+
+
+
+.navigationbarlist li a{
+    display: flex;
+    gap: 20px;
+    color: orange;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background-color: transparent;
+    text-shadow: #000 1px 1px 2px;
+
+}
+
+.navigationbarlist li a:hover{
+    background-color: white;
+    color: black;
+    border-color: darkblue;
+}
+
+.container{
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+}
+
+.container * {
+    box-sizing: border-box; 
+}
+
+.flex-outer{
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-outer li{
+  border: none;
+  padding: 0;
+  margin-bottom: 20px;
+  list-style: none ;
+}
+
+.flex-outer li {
+  list-style-type: none
+}
+
+
+.flex-outer label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.flex-outer input,
+.flex-outer textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.flex-outer input:focus,
+.flex-outer textarea:focus {
+  border-color: darkblue;
+}
+
+.flex-outer textarea {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex-outer label {
+  text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+
+.flex-outer li:not(:last-child){
+    margin-bottom: 20px;
+}  
+
+/* Estilos específicos para el botón de enviar */
+.EnviarBoton {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  background-color: darkblue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.EnviarBoton:hover {
+  background-color: #00008b;
+  transform: scale(1.1); /* agranda el botón de enviar*/ 
+  list-style-type: none;
+}
+
+
+
+
+.flex-outer li label, .flex-outer li p{
+    padding: 8px;
+    font-weight: 300;
+    letter-spacing: .09em;    
+
+}
+
+/* Estilos para el checkbox */
+.flex-outer li:has(input[type="checkbox"]) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+
+
+/* Términos y condiciones */
+/* Términos y condiciones */
+.terms {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.terms-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  box-shadow: none;
+  background: none;
+  padding: 0;
+}
+
+.terms-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: darkblue;
+}
+
+footer{
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.logo {
+    display: block;
+    
+    
+}
+
+
+.footer-redes img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+main {
+  flex: 1; /* Empuja el footer hacia abajo */
+  padding-bottom: 40px;
+}
+
+.inicio {
+  max-width: 1000px;       /* Limita el ancho del texto */
+  margin: 40px auto;      /* Centra el bloque */
+  text-align: center;     /* Centra el texto */
+  padding: 20px;
+  font-size: 20px;
+}
+
+.inicio h3 {
+  color: darkblue;        /* Color del título */
+  margin-bottom: 15px;
+  font-size: 30px;
+  text-shadow: 1px 1px 1px #000;
+  
+}
+
+.inicio p {
+  font-size: 20px;
+  line-height: 1.6;       /* Hace el texto más legible */
+}
+
+.nuestros-trabajos-galeria {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: darkblue;
+  font-size: 50px;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 2px #000;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.galeria {
+  display: grid; /* Activa el sistema de cuadrícula */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* Crea columnas automáticas según el tamaño de pantalla */
+
+  gap: 20px; /* Espacio entre imágenes */
+  padding: 20px; /* Espacio alrededor de la galería */
+}
+
+.galeria img {
+  width: 100%; /* La imagen ocupa todo el ancho de la columna */
+  height: auto; /* Mantiene la proporción */
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+.galeria img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease; /* animación de la imagen */
+}
+
+.galeria img:hover {
+  transform: scale(1.1); /* agranda la imagen */
+}
+
+
+/* apartado de contacto*/
+
+.contacto-info,
+.contacto-datos,
+.contacto-cta,
+.contacto-mapa {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.contacto-info p,
+.contacto-datos p {
+  font-size: 18px;
+  line-height: 1.6;
+  font-size: 20px;
+}
+
+.contacto-info h2 {
+  font-size: 30px;
+  color: darkblue;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.contacto-mapa h3 {
+  font-size: 30px;
+  color: darkblue;
+  text-shadow: 1px 1px 1px #000;
+
+}
+
+.contacto-datos h3 {  
+  font-size: 30px;
+  color: darkblue;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.contacto-cta p {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.boton-contacto {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background-color: darkblue;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.boton-contacto:hover {
+  background-color: #00008b;
+  transform: scale(1.1);
+  background-color: #00008b;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.icono-x img {
+  width: 50px; 
+  height: 50px;
+}
+
+.footer-redes img:hover {
+  transform: scale(1.2);
+}
+
+.servicios {
+  max-width: 1000px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.servicios h3 {
+  color: darkblue;
+  font-size: 32px;
+  margin-bottom: 30px;
+  font-size: 30px;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.servicios-lista {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 20px;
+}
+
+.servicio {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 8px;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicio:hover {
+  transform: scale(1.08); /* agranda la tarjeta */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+.servicio h4 {
+  color: darkblue;
+  margin-bottom: 10px;
+  font-size: 26px;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.aviso-legal {
+  max-width: 1000px;
+  margin: 60px auto;
+  text-align: center;
+  font-size: 20px;
+  color: lightblue;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
